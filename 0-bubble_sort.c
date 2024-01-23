@@ -21,7 +21,7 @@ void bubble_sort(int *array, size_t size)
 				{
 					if (k < size - 1)
 					{
-						printf(", ");
+						_puts(", ");
 					}
 				}
 				_puts("\n");
