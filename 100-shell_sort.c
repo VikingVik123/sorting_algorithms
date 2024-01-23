@@ -8,10 +8,10 @@
 
 void shell_sort(int *array, size_t size)
 {
+	size_t inte = 1;
+	size_t i;
 	if (array == NULL || size <= 1)
 		return;
-
-	size_t inte = 1;
 
 	while (inte <= size / 3)
 	{
@@ -20,14 +20,14 @@ void shell_sort(int *array, size_t size)
 
 	while (inte > 0)
 	{
-		for (size_t i = inte; i < size; ++i)
+		for (i = inte; i < size; ++i)
 		{
 			int temp = array[i];
 			size_t j;
 
 			for (j = i; j >= inte && array[j - inte] > temp; j -= inte)
 			{
-				array[j] = array[j - interval];
+				array[j] = array[j - inte];
 			}
 			array[j] = temp;
 		}
